@@ -49,13 +49,14 @@ Public Class Zip
             Dim Buffer As Byte() = New Byte(4095) {}
             Dim Entry As ZipEntry = New ZipEntry(System.IO.Path.GetFileName(fileToAdd))
             Entry.DateTime = DateTime.Now
-            ZipStream.PutNextEntry(entry)
+            Entry.Size = New IO.FileInfo(fileToAdd).Length
+            ZipStream.PutNextEntry(Entry)
             Using FS As FileStream = File.OpenRead(fileToAdd)
                 Dim SourceBytes As Integer = 0
-                Do
+                While FS.Position < Entry.Size
                     SourceBytes = FS.Read(Buffer, 0, Buffer.Length)
-                    ZipStream.Write(Buffer, 0, SourceBytes)
-                Loop While SourceBytes > 0
+                    If SourceBytes > 0 Then ZipStream.Write(Buffer, 0, SourceBytes)
+                End While
             End Using
             ZipStream.Finish()
             ZipStream.Close()
