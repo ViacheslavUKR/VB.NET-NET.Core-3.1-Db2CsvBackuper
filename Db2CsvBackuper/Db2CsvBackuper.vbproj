@@ -2,12 +2,26 @@
 
   <PropertyGroup>
     <RootNamespace>Db2CsvBackuper</RootNamespace>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RepositoryUrl>https://github.com/ViacheslavUKR/VB.NET-NET.Core-3.1-Db2CsvBackuper</RepositoryUrl>
+    <PackageIcon>asp_net_core_3_1_vb_GDH_icon.jpg</PackageIcon>
+    <Authors>vb-net.com</Authors>
+    <Company>vb-net.com</Company>
+    <AssemblyVersion>1.0.0.1</AssemblyVersion>
+    <FileVersion>1.0.0.1</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.1.2" />
     <PackageReference Include="SharpZipLib" Version="1.2.0" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="G:\Downloads\asp_net_core_3_1_vb_GDH_icon.jpg">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
