@@ -2,8 +2,8 @@
 Imports System.Text
 Imports MySql.Data.MySqlClient
 
-Partial Public Class MyDbDumper
-    Public Shared Sub DumpMyTableToFile(ByVal Connection As MySqlConnection, ByVal TableName As String, ByVal DestinationFile As String)
+Partial Public Class DbDumper
+    Public Shared Sub DumpTableToFile(ByVal Connection As MySqlConnection, ByVal TableName As String, ByVal DestinationFile As String)
         Using CMD = New MySqlCommand("select * from " & TableName & ";", Connection)
             Using RDR As MySqlDataReader = CMD.ExecuteReader()
                 Using OutFile = File.CreateText(DestinationFile)

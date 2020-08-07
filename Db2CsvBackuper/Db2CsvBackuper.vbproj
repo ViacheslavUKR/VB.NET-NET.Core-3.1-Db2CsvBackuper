@@ -9,6 +9,10 @@
     <Company>vb-net.com</Company>
     <AssemblyVersion>1.0.0.1</AssemblyVersion>
     <FileVersion>1.0.0.1</FileVersion>
+    <Version>1.0.1</Version>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Description></Description>
+    <PackageProjectUrl>https://github.com/ViacheslavUKR/VB.NET-NET.Core-3.1-Db2CsvBackuper/tree/master/Db2CsvBackuper</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
